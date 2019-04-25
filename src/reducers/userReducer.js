@@ -3,7 +3,7 @@ import { SET_USER_NAME, GET_USER,
         INCREMENT_WRONG_ANSWERS } from '../actions/types';
 
 const initialState = {
-    name: "",
+    name: "Stranger",
     correctAnswers: 0,
     wrongAnswers: 0
 }
