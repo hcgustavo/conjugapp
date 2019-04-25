@@ -11,7 +11,6 @@ let currentIndex = 0;
 class Question extends Component {
 
     componentWillMount() {
-        console.log("mounted question component");
         this.props.fetchQuestions();
     }
 
@@ -25,9 +24,12 @@ class Question extends Component {
             let correctAnswer = this.props.questions[currentIndex].response;
             if(answer.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim() === correctAnswer) {
                 alert("Correct!");
+                currentIndex++;
             } else {
-                alert("Incorrect...")
+                alert("Incorrect...");
+                currentIndex++;
             }
+            this.forceUpdate(); //not ideal, but it will do it for now
         }
     }
 
@@ -36,7 +38,7 @@ class Question extends Component {
         let verb = "";
         if(this.props.questions.length > 0) {
             questionParts = this.props.questions[currentIndex].parts.map(part => (
-                <Col>
+                <Col key={part}>
                     <Card>
                         <Card.Body>{part}</Card.Body>
                     </Card>
