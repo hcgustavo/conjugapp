@@ -4,6 +4,7 @@ import './styles/Question.css';
 import { connect } from 'react-redux';
 import { fetchQuestions } from './actions/questionsActions';
 import { incrementCorrectAnswers, incrementWrongAnswers } from './actions/userActions';
+import loading from './loading.svg';
 
 let answerInput;
 let currentIndex = 0;
@@ -42,6 +43,21 @@ class Question extends Component {
         }
     }
 
+    renderLoading() {
+        if(this.props.questions.length === 0) {
+            return (
+                <div className="Questions-Loading">
+                    <img src={loading} />
+                    <p>En cours de téléchargement des questions...</p>
+                </div>
+            )
+        } else {
+            return (
+               <div></div>
+            )
+        }
+    }
+
     render() {
         let questionParts = [];
         let verb = "";
@@ -65,6 +81,9 @@ class Question extends Component {
         return (
         <div className="Question">
             <Container>
+                <Row>
+                   {this.renderLoading()}
+                </Row>
                 <Row>
                     {questionParts}
                     {verb}

@@ -5,5 +5,15 @@
 
 .Form {
     width: 80vw;
-    margin: 10vh auto 10vh auto;
+    margin: 10vh auto;
+}
+
+.Questions-Loading {
+    color: #fff;
+    margin: 0 auto;
+    font-style: oblique;
+}
+
+.Questions-Loading img {
+    height: 10vh;
 }
