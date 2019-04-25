@@ -3,11 +3,11 @@ import './styles/Game.css';
 import Question from './Question';
 import Stats from './Stats';
 import { connect } from 'react-redux';
-import { getUserName } from './actions/userActions';
+import { getUser } from './actions/userActions';
 
 class Game extends Component {
     componentWillMount() {
-        this.props.getUserName();
+        this.props.getUser();
     }
 
     render() {
@@ -27,4 +27,4 @@ const mapStateToProps = state => ({
     userName: state.user.name
 })
 
-export default connect(mapStateToProps, { getUserName })(Game);
+export default connect(mapStateToProps, { getUser })(Game);

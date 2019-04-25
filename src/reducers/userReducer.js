@@ -1,4 +1,6 @@
-import { SET_USER_NAME, UPDATE_CORRECT_ANSWERS, UPDATE_WRONG_ANSWERS, GET_USER_NAME } from '../actions/types';
+import { SET_USER_NAME, GET_USER, 
+        INCREMENT_CORRECT_ANSWERS,
+        INCREMENT_WRONG_ANSWERS } from '../actions/types';
 
 const initialState = {
     name: "",
@@ -14,11 +16,25 @@ export default function(state = initialState, action) {
                 name: action.payload
             }
 
-        case GET_USER_NAME: {
+        case GET_USER: {
             return {
                 ...state
             }
         }
+
+        case INCREMENT_CORRECT_ANSWERS:
+            return {
+                ...state,
+                correctAnswers: state.correctAnswers + 1
+            }
+
+
+        case INCREMENT_WRONG_ANSWERS:
+            return {
+                ...state,
+                wrongAnswers: state.wrongAnswers + 1
+            }
+
 
         default:
             return state;
