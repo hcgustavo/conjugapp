@@ -1,7 +1,7 @@
-import { SET_USER_NAME, UPDATE_CORRECT_ANSWERS, UPDATE_WRONG_ANSWERS } from '../actions/types';
+import { SET_USER_NAME, UPDATE_CORRECT_ANSWERS, UPDATE_WRONG_ANSWERS, GET_USER_NAME } from '../actions/types';
 
 const initialState = {
-    name: "",
+    name: "Stranger",
     correctAnswers: 0,
     wrongAnswers: 0
 }
@@ -13,6 +13,12 @@ export default function(state = initialState, action) {
                 ...state,
                 name: action.payload
             }
+
+        case GET_USER_NAME: {
+            return {
+                ...state
+            }
+        }
 
         default:
             return state;
