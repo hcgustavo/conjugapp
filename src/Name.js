@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './styles/Name.css';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { setUserName } from './actions/userActions';
 
 export default class Name extends Component {
     onSubmit(e) {

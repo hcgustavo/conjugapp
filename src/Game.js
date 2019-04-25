@@ -4,11 +4,6 @@ import Question from './Question';
 import Stats from './Stats';
 
 export default class Main extends Component {
-    componentWillMount() {
-        // Load questions
-        console.log("Mounted main");
-    }
-
     render() {
         return (
         <div className="Game">
