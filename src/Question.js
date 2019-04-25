@@ -15,7 +15,6 @@ class Question extends Component {
     }
 
     onSubmit = e => {
-        console.log(`currentIndex = ${currentIndex} | questions length = ${this.props.questions.length}`)
         e.preventDefault();
         this.evaluateAnswer(answerInput.value);
     }
@@ -27,7 +26,7 @@ class Question extends Component {
         }
         if(this.props.questions.length > 0) {
             let correctAnswer = this.props.questions[currentIndex].response;
-            if(answer.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim() === correctAnswer) {
+            if(answer.toLowerCase().replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"").trim() === correctAnswer) {
                 alert("C'est correct! :)");
                 this.props.incrementCorrectAnswers(); 
             } else {
