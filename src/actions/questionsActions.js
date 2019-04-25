@@ -1,7 +1,7 @@
 import { FETCH_QUESTIONS } from './types';
 
 export const fetchQuestions = () => dispatch => {
-    fetch('http://localhost:8080/api/questions')
+    fetch('https://conjugapp-backend.herokuapp.com/api/questions')
     .then(res => res.json())
     .then(questions => 
         dispatch({
