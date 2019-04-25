@@ -1,0 +1,15 @@
+.Name {
+    color: #FFF;
+    text-align: center;
+}
+
+.Form-Name {
+    margin-top: 100px;
+}
+
+.Input-Name {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 0 auto;
+}
