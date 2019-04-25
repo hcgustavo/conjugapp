@@ -1,8 +1,6 @@
-<h2 align="center">ConjugApp</h3>
-
-<h4 align="center"><a href="https://conjug-app.herokuapp.com/" target="_blank">Go to the live app</a></h4>
-
+<h1 align="center">ConjugApp</h3>
 <h3 align="center">A React web app to practice conjugation of french verbs</h4>
+<h4 align="center"><a href="https://conjug-app.herokuapp.com/" target="_blank">Go to the live app</a></h4>
 
 <p align="center">
     <img src="./promo/screen01.png" height="70%" width="70%" alt="App screenshot">
