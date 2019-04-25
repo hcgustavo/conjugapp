@@ -1,7 +1,7 @@
 import { SET_USER_NAME, UPDATE_CORRECT_ANSWERS, UPDATE_WRONG_ANSWERS, GET_USER_NAME } from '../actions/types';
 
 const initialState = {
-    name: "Stranger",
+    name: "",
     correctAnswers: 0,
     wrongAnswers: 0
 }
