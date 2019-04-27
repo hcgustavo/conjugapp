@@ -1,5 +1,5 @@
 <h1 align="center">ConjugApp</h3>
-<h3 align="center">A React web app to practice conjugation of french verbs</h4>
+<h3 align="center">A React web app developed in 12 hours to practice conjugation of french verbs</h4>
 <h4 align="center"><a href="https://conjug-app.herokuapp.com/" target="_blank">Go to the live app</a></h4>
 
 <p align="center">
